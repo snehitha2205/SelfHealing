@@ -12,6 +12,11 @@ This project is a small, runnable demo of real self-healing browser automation. 
 - Validates the returned locator and retries the action
 - Confirms the task is added after the healed retry
 
+## Self-Healing Test Automation Architecture
+
+![Self-Healing Test Automation Architecture](./images/arch.png)
+
+
 ## Project structure
 
 ```text

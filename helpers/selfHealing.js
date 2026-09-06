@@ -189,7 +189,7 @@ function validateHealingDecision(decision) {
 }
 
 async function askGeminiForHealing(evidence) {
-    const apiKey = "";
+    const apiKey = "AIzaSyBTmlwZI6p18X_UsC1Sb3u5Wq2LfEEEDrI";
 
     if (!apiKey) {
         throw new Error(
