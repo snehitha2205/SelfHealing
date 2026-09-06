@@ -1,0 +1,7 @@
+- main [ref=e2]:
+  - heading "My To-Do List" [level=1] [ref=e3]
+  - generic [ref=e4]:
+    - textbox "Task input" [ref=e5]:
+      - /placeholder: Enter a task...
+    - button "Add" [ref=e6] [cursor=pointer]
+  - list

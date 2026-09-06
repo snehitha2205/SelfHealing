@@ -1,0 +1,67 @@
+
+> self-healing-todo-demo@1.0.0 test
+> npx codeceptjs run --steps --config codecept.conf.cjs
+
+CodeceptJS v3.7.9 #StandWithUkraine
+Using test root "D:\OT\self_healing"
+
+To-Do List --
+D:\OT\self_healing\tests\todo_test.js
+  Add a task with self-healing
+  Scenario()
+[TEST] Opening Todo application
+[TEST] Clicking #add-task-btn
+    I am on page "http://localhost:3000"
+    I wait for element "#task-input", 10
+    I fill field "#task-input", "Learn self-healing"
+    I click "#add-task-btn"
+[FAIL] Original locator failed
+[FAIL] Error: Clickable element "#add-task-btn" was not found by text|CSS|XPath
+[MCP] Evidence URL: http://localhost:3000
+[MCP] Collecting failure evidence...
+[MCP] Navigated evidence browser to http://localhost:3000
+[MCP] Accessibility snapshot collected
+[MCP] DOM collected
+[MCP] Screenshot collected
+[MCP] Failure evidence collected
+[AI] Sending evidence to Gemini...
+[AI] Suggested locator: button
+[AI] Reason: The original locator was not found, and the current page evidence shows a button with accessible name 'Add' without any specific ID, data-testid, class, or other explicitly listed attribute in the DOM for a more granular CSS selector. Therefore, the most generic valid CSS selector 'button' is used.
+[HEAL] Validated replacement locator: button
+[HEAL] Retrying click...
+[HEAL] Retry with healed locator failed
+[HEAL] Healed locator used: button
+[HEAL] Error: Clickable element "#add-task-btn" was not found by text|CSS|XPath
+  × FAILED in 23388ms
+
+
+-- FAILURES:
+
+  1) To-Do List
+       Add a task with self-healing:
+     
+  Clickable element "#add-task-btn" was not found by text|CSS|XPath
+      at new ElementNotFound (node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:15:11)
+      at assertElementExists (node_modules\codeceptjs\lib\helper\Playwright.js:4081:11)
+      at Playwright.proceedClick (node_modules\codeceptjs\lib\helper\Playwright.js:3835:5)
+  
+  
+  ( ) File: file://D:\OT\self_healing\tests\todo_test.js
+  
+  ( ) Scenario Steps:
+  × I.click("#add-task-btn") at selfHealingClick (.\helpers\selfHealing.js:315:17)
+  √ I.fillField("#task-input", "Learn self-healing") at Test.<anonymous> (.\tests\todo_test.js:9:5)
+  √ I.waitForElement("#task-input", 10) at Test.<anonymous> (.\tests\todo_test.js:8:5)
+  √ I.amOnPage("http://localhost:3000") at Test.<anonymous> (.\tests\todo_test.js:7:5)
+  
+  ( ) Artifacts:
+  - screenshot: D:\OT\self_healing\output\Add_a_task_with_self-healing.failed.png
+  
+  ( ) Metadata:
+  - browser: chromium
+  - browserVersion: 153.0.8010.12
+  - windowSize: 1280x720
+
+
+  FAIL  | 0 passed, 1 failed   // 26s
+Run with --verbose flag to see complete NodeJS stacktrace

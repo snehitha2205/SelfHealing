@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>My To-Do List</h1>
+
+      <div class="todo-form">
+        <input id="task-input" type="text" placeholder="Enter a task..." aria-label="Task input" />
+        <button id="add-todo-btn" type="button">Add</button>
+      </div>
+
+      <ul id="todo-list" aria-live="polite"></ul>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

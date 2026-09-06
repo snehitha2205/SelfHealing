@@ -1,0 +1,21 @@
+{
+  "name": "self-healing-todo-demo",
+  "version": "1.0.0",
+  "description": "Self-healing todo demo using CodeceptJS, Playwright, MCP, and Gemini.",
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "npx codeceptjs run --steps --config codecept.conf.cjs",
+    "mcp": "npx -y @playwright/mcp@0.0.80 --port 8931 --shared-browser-context"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.121",
+    "@codeceptjs/configure": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ai": "^6.0.0",
+    "codeceptjs": "^3.7.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "playwright": "^1.55.0",
+    "zod": "^3.25.76"
+  }
+}

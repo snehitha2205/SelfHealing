@@ -1,0 +1,14 @@
+{
+  "name": "playwright-mcp",
+  "version": "1.0.0",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--port",
+        "8931"
+      ]
+    }
+  }
+}
